@@ -17,7 +17,6 @@ export const nodeElements = [
   {  data: { id: 'edge1', source: 'mcu1', target: 'network1' }},
   {  data: { id: 'edge2', source: 'mcu2', target: 'network1' }},
   {  data: { id: 'edge3', source: 'mcu3', target: 'network1' }},
-  {  data: { id: 'edge4', source: 'mcu4', target: 'network2' }},
   {  data: { id: 'edge5', source: 'mcu5', target: 'network2' }},
   {  data: { id: 'edge6', source: 'mcu6', target: 'network3' }},
   {  data: { id: 'edge7', source: 'mcu3', target: 'network3' }},
