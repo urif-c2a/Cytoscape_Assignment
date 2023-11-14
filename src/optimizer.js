@@ -1,6 +1,17 @@
 import cytoscape from 'cytoscape'
 import { stylesheet } from './stylesheet';
 
+import elk from 'cytoscape-elk'
+import fcose from 'cytoscape-fcose'
+import cola from 'cytoscape-cola';
+import dagre from 'cytoscape-dagre';
+
+cytoscape.use(elk)
+cytoscape.use(fcose)
+cytoscape.use(dagre);
+cytoscape.use(cola);
+
+
 const isEdge = (element) => {
     return ('source' in element.data) && ('target' in element.data);
 }
@@ -70,9 +81,25 @@ export const optimizeGraph = (cy, nodeElements) => {
         randomize: true,
         nodeDimensionsIncludeLabels: true,
         elk: {
-          algorithm: 'stress',
-          'stress.epsilon': 0.1, // Adjust the minimum allowed distance between nodes
-          'stress.desiredEdgeLength': 40.0,
+
+            // algorithm: 'graphviz.neato',
+            
+
+            algorithm: 'mrtree',
+
+
+            // algorithm: 'sporeOverlap',
+            // 'elk.overlapRemoval.maxIterations': 400, // Adjust the minimum allowed distance between nodes
+            // 'elk.spacing.nodeNode': 20,
+
+
+            // algorithm: 'sporeCompaction',
+            // 'elk.spacing.nodeNode': 400, // Adjust the minimum allowed distance between nodes
+            // 'sporeCompaction.desiredEdgeLength': 40.0,
+
+            //   algorithm: 'stress',
+        //   'stress.epsilon': 0.1, // Adjust the minimum allowed distance between nodes
+        //   'stress.desiredEdgeLength': 40.0,
         }
     };
     let layout = cy.layout(layoutParams);

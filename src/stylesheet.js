@@ -1,13 +1,13 @@
 import cytoscape from 'cytoscape';
-import elk from 'cytoscape-elk'
-import fcose from 'cytoscape-fcose'
-import cola from 'cytoscape-cola';
-import dagre from 'cytoscape-dagre';
+// import elk from 'cytoscape-elk'
+// import fcose from 'cytoscape-fcose'
+// import cola from 'cytoscape-cola';
+// import dagre from 'cytoscape-dagre';
 
-cytoscape.use(elk)
-cytoscape.use(fcose)
-cytoscape.use(dagre);
-cytoscape.use(cola);
+// cytoscape.use(elk)
+// cytoscape.use(fcose)
+// cytoscape.use(dagre);
+// cytoscape.use(cola);
 
 
 const getAlgoOptions = (algo) => {
