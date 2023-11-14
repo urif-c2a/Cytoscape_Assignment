@@ -59,23 +59,23 @@ export const optimizeGraph = (cy, nodeElements) => {
     // let dimensions = getMatrixDimensions();
     // matrix = new Map([[dimensions.center, ]]);
 
-    // let layoutParams = {
-    //     fit: false,
-    //     padding: 100,
-    //     animate: false,
-    //     animationDuration: 500,
-    //     name: 'elk',
-    //     // quality: 'proof', // : 'default',
-    //     quality: 'default',
-    //     randomize: true,
-    //     nodeDimensionsIncludeLabels: true,
-    //     elk: {
-    //       algorithm: 'stress',
-    //       'stress.epsilon': 0.1, // Adjust the minimum allowed distance between nodes
-    //       'stress.desiredEdgeLength': 100.0,
-    //     }
-    // };
-    // let layout = cy.layout(layoutParams);
-    // layout.run();
+    let layoutParams = {
+        fit: true,
+        padding: 100,
+        animate: true,
+        animationDuration: 500,
+        name: 'elk',
+        quality: 'proof', // : 'default',
+        // quality: 'default',
+        randomize: true,
+        nodeDimensionsIncludeLabels: true,
+        elk: {
+          algorithm: 'stress',
+          'stress.epsilon': 0.1, // Adjust the minimum allowed distance between nodes
+          'stress.desiredEdgeLength': 40.0,
+        }
+    };
+    let layout = cy.layout(layoutParams);
+    layout.run();
     
 }

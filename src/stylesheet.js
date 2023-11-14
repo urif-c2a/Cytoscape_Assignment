@@ -119,7 +119,7 @@ const layoutOptions = {
   quality: 'proof',
   randomize: true,
   nodeDimensionsIncludeLabels: true,
-  ...getAlgoOptions('fcose'),
+  ...getAlgoOptions('elk'),
 }; // layout options for the nodes
 
 
@@ -185,5 +185,5 @@ base: {
       }
     }
   ],
-  layout: layoutOptions
+  // layout: layoutOptions
 }

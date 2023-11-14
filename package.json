@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "cytoscape": "^3.23.0",
+    "cytoscape-cola": "^2.5.1",
+    "cytoscape-dagre": "^2.5.0",
     "cytoscape-elk": "^2.2.0",
     "cytoscape-fcose": "^2.2.0",
     "cytoscape-springy": "^1.4.2",
